@@ -19,3 +19,5 @@ function domainName(url) {
     // If a match is found, return the domain name, else return null
     return match ? match[1] : null;
 }
+
+domainName = url => url.replace("https://", "").replace("http://", "").replace("www.", "").split(".")[0];
