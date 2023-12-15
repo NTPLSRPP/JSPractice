@@ -1,9 +1,10 @@
 // 65130500020 Nathaphat Lertsiriphongphan
 
 function addNewProduct() {
+    
     const productInput = document.getElementById('product-input')
     const keyword = productInput.value
-
+ 	if(keyword.value.trim().length > 0) {
     const div = document.createElement('div')
     const p = document.createElement('p')
     const button = document.createElement('button')
@@ -23,6 +24,7 @@ function addNewProduct() {
     displayArea.appendChild(div)
 
     productInput.value = ''
+    }
 }
 
 function removeProduct(productId) {
